@@ -112,7 +112,7 @@ function Login({ setView, onComplete }) {
           <button type="button" className="link-btn" onClick={() => setView('forgot')}>Forgot Password?</button>
         </div>
 
-        <button type="submit" className="auth-btn btn-amber" style={{ backgroundColor: 'var(--amber)', color: 'white' }}>
+        <button type="submit" className="btn-aqua" style={{ backgroundColor: 'var(--aqua)', color: 'white' }}>
           Sign In
         </button>
 
@@ -150,7 +150,7 @@ function Signup({ setView, onComplete }) {
   if (success) {
     return (
       <div style={{ textAlign: 'center', padding: '40px 0' }}>
-        <i className="ti ti-check-circle pulse-success" style={{ fontSize: '48px', color: 'var(--teal)' }}></i>
+        <i className="ti ti-check-circle pulse-success" style={{ fontSize: '48px', color: 'var(--aqua)' }}></i>
         <h2 className="auth-heading" style={{ marginTop: '16px' }}>Account created!</h2>
       </div>
     );
@@ -258,7 +258,7 @@ function SignupStep1({ data, update, onNext }) {
         <span>I agree to the Terms of Service and Privacy Policy</span>
       </label>
 
-      <button type="button" className="auth-btn btn-amber" style={{ backgroundColor: 'var(--amber)', color: 'white' }} disabled={!isValid} onClick={onNext}>
+      <button type="button" className="btn-aqua" style={{ backgroundColor: 'var(--aqua)', color: 'white' }} disabled={!isValid} onClick={onNext}>
         Continue
       </button>
     </div>
@@ -275,10 +275,10 @@ function SignupStep2({ data, update, onNext, onPrev }) {
 
       <div className={`access-card ${data.accessBlind ? 'selected' : ''}`} onClick={() => update({accessBlind: !data.accessBlind})}>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontWeight: '600' }}>
-          <div className="custom-checkbox" style={{ borderColor: data.accessBlind ? 'var(--teal)' : '#D3D1C7', backgroundColor: data.accessBlind ? 'var(--teal)' : 'transparent' }}>
+          <div className="custom-checkbox" style={{ borderColor: data.accessBlind ? 'var(--aqua)' : '#D3D1C7', backgroundColor: data.accessBlind ? 'var(--aqua)' : 'transparent' }}>
             {data.accessBlind && <i className="ti ti-check" style={{ color: 'white', fontSize: '14px' }}></i>}
           </div>
-          <i className="ti ti-eye-off" style={{ fontSize: '20px', color: data.accessBlind ? 'var(--teal)' : '#888780' }}></i>
+          <i className="ti ti-eye-off" style={{ fontSize: '20px', color: data.accessBlind ? 'var(--aqua)' : '#888780' }}></i>
           Blind or Low Vision
         </div>
         {data.accessBlind && (
@@ -290,10 +290,10 @@ function SignupStep2({ data, update, onNext, onPrev }) {
 
       <div className={`access-card ${data.accessDeaf ? 'selected' : ''}`} onClick={() => update({accessDeaf: !data.accessDeaf})}>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontWeight: '600' }}>
-          <div className="custom-checkbox" style={{ borderColor: data.accessDeaf ? 'var(--teal)' : '#D3D1C7', backgroundColor: data.accessDeaf ? 'var(--teal)' : 'transparent' }}>
+          <div className="custom-checkbox" style={{ borderColor: data.accessDeaf ? 'var(--aqua)' : '#D3D1C7', backgroundColor: data.accessDeaf ? 'var(--aqua)' : 'transparent' }}>
             {data.accessDeaf && <i className="ti ti-check" style={{ color: 'white', fontSize: '14px' }}></i>}
           </div>
-          <i className="ti ti-player-volume-2" style={{ fontSize: '20px', color: data.accessDeaf ? 'var(--teal)' : '#888780' }}></i>
+          <i className="ti ti-player-volume-2" style={{ fontSize: '20px', color: data.accessDeaf ? 'var(--aqua)' : '#888780' }}></i>
           Deaf or Hard of Hearing
         </div>
         {data.accessDeaf && (
@@ -305,10 +305,10 @@ function SignupStep2({ data, update, onNext, onPrev }) {
 
       <div className={`access-card ${data.accessWheel ? 'selected' : ''}`} onClick={() => update({accessWheel: !data.accessWheel})}>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontWeight: '600' }}>
-          <div className="custom-checkbox" style={{ borderColor: data.accessWheel ? 'var(--teal)' : '#D3D1C7', backgroundColor: data.accessWheel ? 'var(--teal)' : 'transparent' }}>
+          <div className="custom-checkbox" style={{ borderColor: data.accessWheel ? 'var(--aqua)' : '#D3D1C7', backgroundColor: data.accessWheel ? 'var(--aqua)' : 'transparent' }}>
             {data.accessWheel && <i className="ti ti-check" style={{ color: 'white', fontSize: '14px' }}></i>}
           </div>
-          <i className="ti ti-wheelchair" style={{ fontSize: '20px', color: data.accessWheel ? 'var(--teal)' : '#888780' }}></i>
+          <i className="ti ti-wheelchair" style={{ fontSize: '20px', color: data.accessWheel ? 'var(--aqua)' : '#888780' }}></i>
           Wheelchair / Mobility
         </div>
         {data.accessWheel && (
@@ -320,7 +320,7 @@ function SignupStep2({ data, update, onNext, onPrev }) {
 
       <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
         <button type="button" className="auth-btn" style={{ backgroundColor: 'transparent', color: '#888780', border: '1px solid #D3D1C7' }} onClick={onPrev}>Back</button>
-        <button type="button" className="auth-btn btn-amber" style={{ backgroundColor: 'var(--amber)', color: 'white', marginTop: 0 }} onClick={onNext}>Continue</button>
+        <button type="button" className="btn-aqua" style={{ backgroundColor: 'var(--aqua)', color: 'white', marginTop: 0 }} onClick={onNext}>Continue</button>
       </div>
     </div>
   );
@@ -370,7 +370,7 @@ function SignupStep3({ data, update, onNext, onPrev, loading }) {
 
       <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
         <button type="button" className="auth-btn" style={{ backgroundColor: 'transparent', color: '#888780', border: '1px solid #D3D1C7', flex: 1 }} onClick={onPrev}>Back</button>
-        <button type="button" className="auth-btn" style={{ backgroundColor: 'var(--teal)', color: 'white', marginTop: 0, flex: 2 }} disabled={!isValid || loading} onClick={onNext}>
+        <button type="button" className="auth-btn" style={{ backgroundColor: 'var(--aqua)', color: 'white', marginTop: 0, flex: 2 }} disabled={!isValid || loading} onClick={onNext}>
           {loading ? <><i className="ti ti-loader ti-spin" style={{ marginRight: '8px' }}></i>Creating account...</> : 'Create Account'}
         </button>
       </div>
@@ -400,7 +400,7 @@ function ForgotPassword({ setView }) {
   if (sent) {
     return (
       <div style={{ textAlign: 'center', padding: '20px 0', animation: 'slide-up-fade 200ms ease' }}>
-        <i className="ti ti-check-circle pulse-success" style={{ fontSize: '48px', color: 'var(--teal)' }}></i>
+        <i className="ti ti-check-circle pulse-success" style={{ fontSize: '48px', color: 'var(--aqua)' }}></i>
         <h2 className="auth-heading" style={{ marginTop: '16px' }}>Check your email</h2>
         <p style={{ color: 'var(--text-muted)', marginBottom: '24px', fontSize: '14px' }}>We've sent a password reset link to {email}</p>
         
@@ -428,7 +428,7 @@ function ForgotPassword({ setView }) {
           />
         </div>
 
-        <button type="submit" className="auth-btn btn-amber" style={{ backgroundColor: 'var(--amber)', color: 'white' }}>
+        <button type="submit" className="btn-aqua" style={{ backgroundColor: 'var(--aqua)', color: 'white' }}>
           Send Reset Link
         </button>
 
