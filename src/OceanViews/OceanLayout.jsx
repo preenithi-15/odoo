@@ -17,7 +17,7 @@ export default function OceanLayout({ children, navigate, hideNavbar = false }) 
           <h2 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--deep-ocean)', cursor: 'pointer' }} onClick={() => navigate('my-trips')}>
             Traveloop <i className="ti ti-plane-tilt text-gradient"></i>
           </h2>
-          <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--aqua), var(--deep-ocean))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', cursor: 'pointer' }}>
+          <div onClick={() => navigate('profile')} style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--aqua), var(--deep-ocean))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', cursor: 'pointer', boxShadow: '0 0 15px rgba(0, 194, 255, 0.4)' }} className="hover-glow">
             SA
           </div>
         </div>

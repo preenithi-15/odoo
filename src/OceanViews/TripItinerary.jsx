@@ -47,14 +47,17 @@ export default function TripItinerary({ navigate }) {
       <div style={{ padding: '24px' }}>
         
         {/* Trip Sub-Navigation */}
-        <div style={{ display: 'flex', gap: '8px', marginBottom: '24px' }}>
-          <button onClick={() => navigate('trip-budget')} style={{ flex: 1, padding: '12px', borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,0.7)', border: '1px solid var(--aqua)', color: 'var(--deep-ocean)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer' }} className="hover-glow">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '24px' }}>
+          <button onClick={() => navigate('trip-budget')} style={{ padding: '12px', borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,0.7)', border: '1px solid var(--aqua)', color: 'var(--deep-ocean)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer' }} className="hover-glow">
             <i className="ti ti-wallet"></i> Budget
           </button>
-          <button onClick={() => navigate('packing-checklist')} style={{ flex: 1, padding: '12px', borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,0.7)', border: '1px solid var(--sea-green)', color: 'var(--deep-ocean)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer' }} className="hover-glow">
+          <button onClick={() => navigate('packing-checklist')} style={{ padding: '12px', borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,0.7)', border: '1px solid var(--sea-green)', color: 'var(--deep-ocean)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer' }} className="hover-glow">
             <i className="ti ti-checkup-list"></i> Packing
           </button>
-          <button onClick={() => navigate('shared-itinerary')} style={{ flex: 1, padding: '12px', borderRadius: 'var(--radius-sm)', background: 'linear-gradient(135deg, var(--aqua), var(--deep-ocean))', border: 'none', color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer', boxShadow: '0 4px 15px rgba(0, 194, 255, 0.3)' }} className="hover-glow">
+          <button onClick={() => navigate('travel-notes')} style={{ padding: '12px', borderRadius: 'var(--radius-sm)', background: 'rgba(255,255,255,0.7)', border: '1px solid var(--sky-blue)', color: 'var(--deep-ocean)', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer' }} className="hover-glow">
+            <i className="ti ti-notebook"></i> Notes
+          </button>
+          <button onClick={() => navigate('shared-itinerary')} style={{ padding: '12px', borderRadius: 'var(--radius-sm)', background: 'linear-gradient(135deg, var(--aqua), var(--deep-ocean))', border: 'none', color: 'white', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', cursor: 'pointer', boxShadow: '0 4px 15px rgba(0, 194, 255, 0.3)' }} className="hover-glow">
             <i className="ti ti-share"></i> Share
           </button>
         </div>

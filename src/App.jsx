@@ -8,8 +8,10 @@ import CitySearch from './OceanViews/CitySearch';
 import ActivitySearch from './OceanViews/ActivitySearch';
 import TripItinerary from './OceanViews/TripItinerary';
 import TripBudget from './OceanViews/TripBudget';
-import PackingChecklist from './OceanViews/PackingChecklist';
 import SharedItinerary from './OceanViews/SharedItinerary';
+import ProfileSettings from './OceanViews/ProfileSettings';
+import TravelNotes from './OceanViews/TravelNotes';
+import AdminDashboard from './OceanViews/AdminDashboard';
 
 export default function App() {
   // Routes: 'login', 'signup', 'forgot', 'my-trips', 'create', 'city-search', 'activity-search', 'trip-itinerary'
@@ -21,7 +23,7 @@ export default function App() {
         <AuthContainer view={authState} setView={setAuthState} onComplete={() => setAuthState('my-trips')} />
       )}
       
-      {['my-trips', 'create', 'city-search', 'activity-search', 'trip-itinerary', 'trip-budget', 'packing-checklist', 'shared-itinerary'].includes(authState) && (
+      {['my-trips', 'create', 'city-search', 'activity-search', 'trip-itinerary', 'trip-budget', 'packing-checklist', 'shared-itinerary', 'profile', 'travel-notes', 'admin-dashboard'].includes(authState) && (
         <OceanLayout navigate={setAuthState} hideNavbar={authState === 'create'}>
           {authState === 'my-trips' && <MyTrips navigate={setAuthState} />}
           {authState === 'create' && <CreateTrip navigate={setAuthState} />}
@@ -31,6 +33,9 @@ export default function App() {
           {authState === 'trip-budget' && <TripBudget navigate={setAuthState} />}
           {authState === 'packing-checklist' && <PackingChecklist navigate={setAuthState} />}
           {authState === 'shared-itinerary' && <SharedItinerary navigate={setAuthState} />}
+          {authState === 'profile' && <ProfileSettings navigate={setAuthState} />}
+          {authState === 'travel-notes' && <TravelNotes navigate={setAuthState} />}
+          {authState === 'admin-dashboard' && <AdminDashboard navigate={setAuthState} />}
         </OceanLayout>
       )}
     </div>
